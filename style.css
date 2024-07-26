@@ -6,15 +6,16 @@
     margin: 0;
 }
 
-:root{
-    --primary-color: rgb(199, 170, 5)
+:root {
+    --primary-color: rgb(199, 170, 5);
+    --second-color: rgb(7, 147, 212)
 }
 
 /* Navegação */
-nav{
+nav {
     background-color: transparent;
     display: flex;
-    position: fixed;
+    position: absolute;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -165,7 +166,6 @@ button:hover {
     flex-direction: column;
     position: relative;
     padding: 0 50px;
-
 }
 
 .contentDestinos h1 {
@@ -185,3 +185,238 @@ button:hover {
     bottom: 10px;
 }
 
+.text-and-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 60%;
+}
+
+.imgsdestino {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.imgsdestino div {
+    display: flex;
+    justify-content: center;
+}
+
+.imgsdestino img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.tag {
+    padding: 8px 12px;
+    background-color: var(--second-color);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    
+}
+
+.tag:hover {
+    background-color: var(--primary-color);
+    scale: 1.1;
+}
+
+#tittledestino{
+    color: var(--primary-color);
+}
+
+.cardpassagem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: beige;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    position: relative;
+}
+
+#inicio-card, #meio-card, #fim-card {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.oferta {
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#inicio-card .empresa,
+#inicio-card .data,
+#inicio-card .tipo-assento {
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+}
+
+#meio-card {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.saida, .chegada {
+    flex: 1;
+}
+
+.traco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    color: var(--second-color);
+    position: relative;
+    bottom: 10px;
+}
+
+.traco .linha {
+    height: 2px;
+    width: 100px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    position: relative;
+    top: 25px;
+}
+
+.traco .tempo {
+    margin: 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 10px;
+
+}
+
+.traco .paradas {
+    margin: 0;
+    font-size: 12px;
+    color:var(--second-color);
+    position: relative;
+    top: 10px;
+}
+
+#fim-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.preco {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.botao-comprar button {
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.botao-comprar button:hover {
+    background-color: var(--primary-color);
+}
+
+.comentarios {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.comentarios h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+#comentario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+.card-comentario {
+    background-color: beige;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.nome-cliente {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--second-color);
+    margin-bottom: 10px;
+}
+
+.comentario-texto {
+    font-size: 16px;
+    color: #666;
+}
+
+.destinocomentario{
+    color: var(--primary-color);
+    display: flex;
+    position: relative;
+    bottom: 20px;
+}
+
+footer{
+    background-color: var(--primary-color);
+}
