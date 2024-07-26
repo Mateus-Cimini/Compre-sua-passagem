@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #8a1111;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+nav {
+    background-color: transparent;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+#logoNav {
+    scale: 0.8;
+}
+
+#btnnav {
+    display: flex;
+    gap: 25px;
+    margin-left: auto; 
+}
+
+#btnLogin {
+    background-color: rgb(199, 170, 5);
+    color: #fff;
+    height: 30px;
+    border: none;
+    font-size: 15px;
+    border-radius: 10%;
+    cursor: pointer;
+    padding: 0 20px;
+    font-weight: 700;
+    position: relative;
+    top: 18px;
+}
+
+#btnRegister {
+    background-color: rgb(7, 147, 212);
+    color: #fff;
+    height: 30px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    padding: 0 15px;
+    font-weight: 700;
+    position: relative;
+    top: 8px;
+}
+
+#btnLogin:hover, #btnRegister:hover {
+    transform: scale(1.1);
+}
+
+#hero {
+    background-image: url("https://www.wallpaperflare.com/static/701/150/478/parte-landscape-photography-road-iceland-wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: -1;
+}
+
+#hero h1, p {
+    font-size: 50px;
+    max-width: 600px;
+    position: relative;
+    top: 100px;
+}
+
+#hero p {
+    max-width: 500;
+    font-size: 20px;
+}
