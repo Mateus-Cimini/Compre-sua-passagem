@@ -6,6 +6,10 @@
     margin: 0;
 }
 
+:root{
+    --primary-color: rgb(199, 170, 5)
+}
+
 /* Navegação */
 nav{
     background-color: transparent;
@@ -29,7 +33,7 @@ nav{
 }
 
 #btnLogin {
-    background-color: rgb(199, 170, 5);
+    background-color: var(--primary-color);
     color: #fff;
     height: 30px;
     border: none;
@@ -63,12 +67,14 @@ nav{
     background-image: url("https://www.wallpaperflare.com/static/701/150/478/parte-landscape-photography-road-iceland-wallpaper.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
     height: 100vh;
     color: #fff;
     display: flex;
     flex-direction: column;
     position: relative;
     padding: 0 20px;
+    border-radius: 3%;
 }
 
 #imgperfil {
@@ -151,3 +157,31 @@ button {
 button:hover {
     background: #0056b3;
 }
+
+.contentDestinos {
+    height: 100vh;
+    color: #414040c4;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 50px;
+
+}
+
+.contentDestinos h1 {
+    font-size: 50px;
+    max-width: 700px;
+    line-height: 0.9;
+    padding: 20px 0;
+    position: relative;
+    top: 10px;
+}
+
+.contentDestinos p {
+    max-width: 500px;
+    font-size: 20px;
+    padding: 20px 10px;
+    position: relative;
+    bottom: 10px;
+}
+
