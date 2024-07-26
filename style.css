@@ -1,3 +1,4 @@
+/* CSS Geral */
 * {
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
@@ -5,16 +6,8 @@
     margin: 0;
 }
 
-:root {
-    --primary-color: #8a1111;
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-nav {
+/* Navegação */
+nav{
     background-color: transparent;
     display: flex;
     position: fixed;
@@ -56,7 +49,7 @@ nav {
     border: none;
     border-radius: 10%;
     cursor: pointer;
-    padding: 0 15px;
+    padding: 0px 20px;
     font-weight: 700;
     position: relative;
     top: 8px;
@@ -75,26 +68,86 @@ nav {
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: -1;
-}
-
-#imgperfil {
-  
-    display: flex;
-    position: relative;
-    left: 1280px;
-    top: 100px;
-}
-
-#hero h1, p {
-    font-size: 50px;
-    max-width: 600px;
-    position: relative;
-    top: 100px;
     padding: 0 20px;
 }
 
+#imgperfil {
+    margin-top: 20px;
+    position: relative;
+    left: 1250px;
+    top: 80px;
+}
+
+#hero h1 {
+    font-size: 50px;
+    max-width: 600px;
+    padding: 20px 0;
+    position: relative;
+    top: 20px;
+}
+
 #hero p {
-    max-width: 500;
+    max-width: 500px;
     font-size: 20px;
+    padding: 20px 0;
+    position: relative;
+    bottom: 30px;
+}
+
+/* Card Fixar */
+#card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
+    transform: translateX(-50%);
+    z-index: 10; 
+    pointer-events: auto; 
+}
+
+#card form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
 }
