@@ -1,3 +1,48 @@
+// Seleciona os elementos dos inputs
+const cidadeOrigem = document.getElementById("location");
+const cidadeDestino = document.getElementById("destination");
+
+// Adiciona evento para salvar no localStorage quando o valor mudar
+cidadeOrigem.addEventListener('change', function() {
+    localStorage.setItem("cidadeOrigem", this.value);
+});
+
+cidadeDestino.addEventListener('change', function() {
+    localStorage.setItem("cidadeDestino", this.value);
+});
+
+// Recupera e define os valores dos inputs ao carregar a página
+window.onload = function() {
+    const savedOrigem = localStorage.getItem('cidadeOrigem');
+    const savedDestino = localStorage.getItem('cidadeDestino');
+    
+    if (savedOrigem) {
+        cidadeOrigem.value = savedOrigem;
+    }
+    if (savedDestino) {
+        cidadeDestino.value = savedDestino;
+    }
+}
+
+const getCidades = async () => {
+    const response = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/municipios');
+    const data = await response.json();
+    return data.map(cidades => cidades.nome);
+};
+
+$(document).ready(async function() {
+    const cidades = await getCidades();
+
+    $('#location').autocomplete({
+        source: cidades
+    });
+
+    $('#destination').autocomplete({
+        source: cidades
+    });
+});
+
+
 const tags = document.querySelectorAll('.tag');
 const image1 = document.getElementById('img1');
 const image2 = document.getElementById('img2');
